@@ -6,7 +6,7 @@ const DoctorLogin: React.FC = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const handleSubmit = (event: React.FormEvent) => {
-    navigate('/dashboardlayout/appointments');
+    navigate('/dashboardlayout');
     event.preventDefault();
     console.log('Password:', password);
   };
