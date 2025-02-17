@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@capacitor/cli": "^7.0.1",
+    "@capacitor/core": "^7.0.1"
+  }
+}

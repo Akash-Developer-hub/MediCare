@@ -64,10 +64,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out sm:translate-x-0 sm:relative`}
       >
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full mt-5">
           {/* Sidebar Header */}
           <div className="px-6 py-4 border-b flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-indigo-600">MedCare</h1>
+            <h1 className="text-2xl font-bold text-indigo-600">HealthCare Hub</h1>
             <button
               onClick={toggleSidebar}
               className="sm:hidden text-gray-600 hover:text-gray-800 focus:outline-none"
@@ -110,21 +110,22 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
         {/* Header */}
-        <header className="bg-white shadow-sm px-4 py-4 sm:px-6 flex items-center justify-between">
-          <button
-            onClick={toggleSidebar}
-            className="sm:hidden text-gray-600 hover:text-gray-800 focus:outline-none"
-          >
-            <Menu className="h-6 w-6" />
-          </button>
-          <h2 className="text-xl font-semibold text-gray-800">{currentPage}</h2>
-        </header>
+        <header className="bg-white shadow-sm px-4 py-4 sm:px-6 flex items-center justify-between relative z-10">
+  <button
+    onClick={toggleSidebar}
+    className="sm:hidden text-gray-600 hover:text-gray-800 focus:outline-none"
+  >
+    <Menu className="h-6 w-6" />
+  </button>
+  <h2 className="text-xl font-semibold text-gray-800">{currentPage}</h2>
+</header>
+
 
         {/* Page Content */}
         <main className="flex-1 px-4 py-6 sm:px-6">
           {isDashboardHome ? (
             <div>
-              <h3 className="text-lg font-medium text-gray-900 mb-6">Welcome to MedCare Dashboard</h3>
+              <h3 className="text-lg font-medium text-gray-900 mb-6">Welcome to HealthCare Hub Dashboard</h3>
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {menuItems.filter(item => item.name !== "Dashboard").map((item) => {
                   const Icon = item.icon;
